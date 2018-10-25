@@ -1,0 +1,5 @@
+Django==1.10
+django-rest-framework==0.1.0
+djangorestframework==3.9.0
+netifaces==0.10.7
+psycopg2==2.7.5
