@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <title>Product Management</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <body class="w3-container">
+        <center><h2>Product Management</h2></center>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-6" id="add_btn_container">
+                <button class="btn btn-default" onclick="_p.addProductForm()">ADD</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <table id="myTable" class="w3-table-all">
+                    <thead>
+                        <tr class="th_header">
+                            <th></th>
+                            <th>Product
+                                <i class="fa fa-sort" onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')"></i>
+                            </th>
+                            <th>
+                                Sub Category
+                                <i class="fa fa-sort" onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(2)')"></i>
+                            </th>
+                            <th>
+                                Category
+                                <i class="fa fa-sort" onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(3)')"></i>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableData"></tbody>
+                    <tfoot id="add_form_container"></tfoot>
+                </table>
+            </div>
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/static/js/dashboard.js"></script>
+</html>

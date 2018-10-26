@@ -24,3 +24,9 @@ class ProductsSerializers(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = ('name', 'category', 'sub_category')
+
+
+class ProductCreateSerializer(serializers.Serializer):
+    category = serializers.CharField()
+    subcategory = serializers.CharField()
+    product = serializers.CharField()
