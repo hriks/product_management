@@ -27,7 +27,10 @@ class Product(models.Model):
 
     @property
     def category(self):
-        return self.subcategory.category
+        return self.subcategory.category.name
+
+    def sub_category(self):
+        return self.subcategory.name
 
     def __unicode__(self):
         return self.name

@@ -19,10 +19,8 @@ class SubCategorySerializers(serializers.ModelSerializer):
 
 class ProductsSerializers(serializers.ModelSerializer):
     category = serializers.ReadOnlyField()
-
-    def get_category(self, obj):
-        return obj.name
+    sub_category = serializers.ReadOnlyField()
 
     class Meta:
         model = Product
-        fields = '__all__'
+        fields = ('name', 'category', 'sub_category')

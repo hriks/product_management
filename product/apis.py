@@ -22,10 +22,9 @@ class GetSubCategories(generics.ListAPIView):
     queryset = SubCategories.objects.all()
 
 
-class GetProduct(generics.ListAPIView):
+class GetProducts(generics.ListAPIView):
     serializer_class = ProductsSerializers
     queryset = Product.objects.all()
-    filter_backends = [SearchFilter, OrderingFilter]
 
     def filter_queryset(self, queryset):
         if 'category' in self.request.query_params:
