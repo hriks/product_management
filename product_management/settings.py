@@ -29,8 +29,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'product',
     'rest_framework',
-    'product'
 ]
 
 MIDDLEWARE = [
@@ -132,4 +132,4 @@ def ip_addresses():
 # Discover our IP address
 
 
-ALLOWED_HOSTS = ip_addresses()
+ALLOWED_HOSTS = ip_addresses() + ['localhost']
